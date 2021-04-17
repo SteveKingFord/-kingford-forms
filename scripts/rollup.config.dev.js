@@ -1,11 +1,11 @@
 /*
  * @Author: kingford
  * @Date: 2021-04-17 19:41:03
- * @LastEditTime: 2021-04-17 19:43:27
+ * @LastEditTime: 2021-04-17 21:57:26
  */
-import baseConfig from "./rollup.config.base";
-import serve from "rollup-plugin-serve";
-import livereload from "rollup-plugin-livereload";
+import baseConfig from './rollup.config.base';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
 export default {
   ...baseConfig,
@@ -13,11 +13,11 @@ export default {
     ...baseConfig.plugins,
     serve({
       port: 8080,
-      contentBase: ["dist", "examples/brower"],
-      openPage: "index.html",
+      contentBase: ['dist', 'lib', 'es', 'examples/brower'],
+      openPage: 'index.html'
     }),
     livereload({
-      watch: "examples/brower",
-    }),
-  ],
+      watch: 'examples/brower'
+    })
+  ]
 };

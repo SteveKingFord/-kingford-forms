@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.dev.js",
-    "build": "rollup --environment NODE_ENV:development -c scripts/rollup.config.prod.js",
+    "build": "rollup --environment NODE_ENV:production -c scripts/rollup.config.prod.js",
+    "clean": "rm -rf ./dist/ ./es/ ./lib/",
     "x": "npm --no-git-tag-version version major",
     "y": "npm --no-git-tag-version version minor",
     "z": "npm --no-git-tag-version version patch",
@@ -23,6 +24,10 @@
     "pub:x": "npm run x && npm publish --access=public",
     "pub:y": "npm run y && npm publish --access=public",
     "pub:z": "npm run z && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveKingFord/kingford-forms.git"
   },
   "author": "kingford",
   "license": "ISC",
