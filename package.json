@@ -2,8 +2,8 @@
   "name": "@kingfor/forms",
   "version": "1.0.0",
   "description": "<!--  * @Author: kingford  * @Date: 2021-04-16 09:39:51  * @LastEditTime: 2021-04-16 09:40:11 -->",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
+  "module": "es/index.js",
+  "main": "lib/index.js",
   "directories": {
     "commit": "git-cz"
   },
