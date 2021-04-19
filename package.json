@@ -1,6 +1,6 @@
 {
   "name": "@kingford/forms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "<!--  * @Author: kingford  * @Date: 2021-04-16 09:39:51  * @LastEditTime: 2021-04-16 09:40:11 -->",
   "module": "es/index.js",
   "main": "lib/index.js",
