@@ -1,0 +1,24 @@
+{
+  "name": "kingford",
+  "version": "1.0.0",
+  "description": "A form npm package  tools",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skingford/kingford.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skingford/kingford/issues"
+  },
+  "homepage": "https://github.com/skingford/kingford#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": "^6.0.0"
+  }
+}
