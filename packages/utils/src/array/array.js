@@ -1,9 +1,9 @@
 /*
  * @Author: kingford
  * @Date: 2021-05-19 10:37:22
- * @LastEditTime: 2021-05-19 10:45:08
+ * @LastEditTime: 2021-06-13 01:03:01
  */
-import { isObject } from '../validate';
+import { isObject } from '../validate/instanceof';
 /**
  * 数组转树结构
  * @param arr 数组

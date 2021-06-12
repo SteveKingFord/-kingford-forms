@@ -1,5 +1,5 @@
 {
-  "name": "@kingford/cache",
+  "name": "@kingford/util",
   "version": "1.0.0",
   "description": "<!--  * @Author: kingford  * @Date: 2021-05-19 09:39:51  * @LastEditTime: 2021-05-19 10:40:11 -->",
   "module": "es/index.js",

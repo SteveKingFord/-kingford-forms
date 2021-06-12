@@ -177,3 +177,5 @@ function objToStr(val) {
   const ObjToStr = Object.prototype.toString;
   return ObjToStr.call(val);
 }
+
+export function isObject() {}
