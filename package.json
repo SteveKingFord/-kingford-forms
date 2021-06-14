@@ -39,7 +39,6 @@
     "testRegex": "/packages/.*.test.js?$"
   },
   "scripts": {
-    "start": "rollup -w --environment NODE_ENV:development -c scripts/build/rollup.config.dev.js",
     "dev": "rollup -w --environment NODE_ENV:development -c scripts/build/rollup.config.dev.js",
     "build": "rollup --environment NODE_ENV:production -c scripts/build/rollup.config.prod.js",
     "lint": "eslint src",

@@ -1,12 +1,29 @@
 /*
  * @Author: kingford
  * @Date: 2021-04-17 19:41:20
- * @LastEditTime: 2021-04-17 19:43:40
+ * @LastEditTime: 2021-06-14 21:34:40
  */
-import baseConfig from "./rollup.config.base";
-import filesize from "rollup-plugin-filesize";
+import configList from './rollup.config';
+import filesize from 'rollup-plugin-filesize';
+import { terser } from 'rollup-plugin-terser';
 
-export default {
-  ...baseConfig,
-  plugins: [...baseConfig.plugins, filesize()],
-};
+configList.map((config, index) => {
+  config.plugins = [
+    ...config.plugins,
+    ...[
+      filesize(),
+      terser({
+        output: {
+          ascii_only: true // 仅输出ascii字符
+        },
+        compress: {
+          pure_funcs: ['console.log'] // 去掉console.log函数
+        }
+      })
+    ]
+  ];
+
+  return config;
+});
+
+export default configList;
