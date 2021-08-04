@@ -3,6 +3,34 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "dev": "node scripts/build/dev.js",
+    "build": "node scripts/build/build.js",
+    "lint": "eslint --ext .ts packages/*/src/**.ts"
+  },
+  "types": "test-dts/index.d.ts",
+  "tsd": {
+    "directory": "test-dts"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "devEngines": {
+    "node": "^12.17.0 || 13.x || 14.x || 15.x || 16.x"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.9",
@@ -37,15 +65,7 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2"
   },
-  "devEngines": {
-    "node": "^12.17.0 || 13.x || 14.x || 15.x || 16.x"
-  },
   "jest": {
     "testRegex": "/packages/.*.test.js?$"
-  },
-  "scripts": {
-    "dev": "node scripts/build/dev.js",
-    "build": "node scripts/build/build.js",
-    "lint": "eslint --ext .ts packages/*/src/**.ts"
   }
 }
