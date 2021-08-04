@@ -1,28 +1,40 @@
 {
   "name": "@kingford/cache",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "<!--  * @Author: kingford  * @Date: 2021-05-19 09:39:51  * @LastEditTime: 2021-05-19 10:40:11 -->",
-  "module": "es/index.js",
-  "main": "lib/index.js",
-  "directories": {
-    "commit": "git-cz"
-  },
-  "scripts": {
-    "clean": "rm -rf ./dist/ ./es/ ./lib/",
-    "x": "npm --no-git-tag-version version major",
-    "y": "npm --no-git-tag-version version minor",
-    "z": "npm --no-git-tag-version version patch",
-    "prepublish": "npm run build",
-    "pub": "npm publish --access=public",
-    "pub:x": "npm run x && npm publish --access=public",
-    "pub:y": "npm run y && npm publish --access=public",
-    "pub:z": "npm run z && npm publish --access=public"
+  "main": "index.js",
+  "module": "dist/cache.runtime.esm-bundler.js",
+  "types": "dist/cache.d.ts",
+  "unpkg": "dist/cache.global.js",
+  "jsdelivr": "dist/cache.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "buildOptions": {
+    "name": "Cache",
+    "formats": [
+      "esm-bundler",
+      "esm-bundler-runtime",
+      "cjs",
+      "global",
+      "global-runtime",
+      "esm-browser",
+      "esm-browser-runtime"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SteveKingFord/kingford-forms.git"
+    "url": "https://github.com/skingford/kingford.git"
   },
+  "keywords": [
+    "cache"
+  ],
   "author": "kingford",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skingford/kingford/issues"
+  },
+  "homepage": "https://github.com/skingford/kingford#readme",
   "devDependencies": {}
 }
