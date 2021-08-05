@@ -1,12 +1,19 @@
 {
   "private": true,
+  "version": "1.0.0",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "dev": "node scripts/build/dev.js",
     "build": "node scripts/build/build.js",
-    "lint": "eslint --ext .ts packages/*/src/**.ts"
+    "release": "node scripts/build/release.js",
+    "lint": "eslint --ext .ts packages/*/src/**.ts",
+    "size": "node scripts/build/build.js jin runtime-dom size-check -p -f global",
+    "format": "prettier --write --parser typescript \"packages/**/*.ts?(x)\"",
+    "test": "node scripts/build/build.js jin -f global -d && jest --runInBand",
+    "test-dts": "node scripts/build/build.js shared reactivity runtime-core runtime-dom -dt -f esm-bundler && yarn test-dts-only",
+    "test-dts-only": "tsc -p ./test-dts/tsconfig.json && tsc -p ./test-dts/tsconfig.build.json"
   },
   "types": "test-dts/index.d.ts",
   "tsd": {
