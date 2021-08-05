@@ -4,10 +4,7 @@ const path = require('path')
 const chalk = require('chalk')
 const semver = require('semver')
 
-const PKG_URL = '../../package'
-const PKG_FULL_URL = PKG_URL + '.json'
-
-const currentVersion = require(`${PKG_URL}.json`).version
+const currentVersion = require('../../package.json').version
 const { prompt } = require('enquirer')
 const execa = require('execa')
 
@@ -166,7 +163,7 @@ function updateDeps(pkg, depType, version) {
   Object.keys(deps).forEach(dep => {
     if (
       dep === 'jin' ||
-      (dep.startsWith('@kf') && packages.includes(dep.replace(/^@kf\//, '')))
+      (dep.startsWith('@jin') && packages.includes(dep.replace(/^@jin\//, '')))
     ) {
       console.log(
         chalk.yellow(`${pkg.name} -> ${depType} -> ${dep}@${version}`)
@@ -198,7 +195,7 @@ async function publishPackage(pkgName, version, runIfNotDry) {
     releaseTag = 'beta'
   } else if (version.includes('rc')) {
     releaseTag = 'rc'
-  } else if (pkgName === 'jin') {
+  } else if (pkgName === 'vue') {
     // TODO remove when 3.x becomes default
     releaseTag = 'next'
   }

@@ -19,7 +19,7 @@
     "types": ["jest", "puppeteer", "node"],
     "rootDir": ".",
     "paths": {
-      "@kf/*": ["packages/*/src"],
+      "@jin/*": ["packages/*/src"],
       "jin": ["packages/jin/src"]
     }
   },
