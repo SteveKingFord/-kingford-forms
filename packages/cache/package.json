@@ -3,7 +3,7 @@
   "version": "1.0.0-beta.1",
   "description": "<!--  * @Author: kingford  * @Date: 2021-05-19 09:39:51  * @LastEditTime: 2021-05-19 10:40:11 -->",
   "main": "index.js",
-  "module": "dist/cache.runtime.esm-bundler.js",
+  "module": "dist/cache.esm-bundler.js",
   "types": "dist/cache.d.ts",
   "unpkg": "dist/cache.global.js",
   "jsdelivr": "dist/cache.global.js",
