@@ -1,3 +1,8 @@
+/*
+ * @Author: kingford
+ * @Date: 2021-08-05 10:17:59
+ * @LastEditTime: 2021-08-05 10:54:29
+ */
 // This entry exports the runtime only, and is built as
 // `dist/vue.esm-bundler.js` which is used by default for bundlers.
 import { initDev } from './dev'
@@ -12,13 +17,13 @@ export * from '@vue/runtime-dom'
 export const compile = () => {
   if (__DEV__) {
     warn(
-      `Runtime compilation is not supported in this build of Vue.` +
+      `Runtime compilation is not supported in this build of jin.` +
         (__ESM_BUNDLER__
-          ? ` Configure your bundler to alias "vue" to "vue/dist/vue.esm-bundler.js".`
+          ? ` Configure your bundler to alias "jin" to "jin/dist/jin.esm-bundler.js".`
           : __ESM_BROWSER__
-          ? ` Use "vue.esm-browser.js" instead.`
+          ? ` Use "jin.esm-browser.js" instead.`
           : __GLOBAL__
-          ? ` Use "vue.global.js" instead.`
+          ? ` Use "jin.global.js" instead.`
           : ``) /* should not happen */
     )
   }
