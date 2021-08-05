@@ -1,0 +1,40 @@
+{
+  "name": "@kingford/jin",
+  "version": "1.0.0-beta.1",
+  "description": "<!--  * @Author: kingford  * @Date: 2021-05-19 09:39:51  * @LastEditTime: 2021-05-19 10:40:11 -->",
+  "main": "index.js",
+  "module": "dist/jin.runtime.esm-bundler.js",
+  "types": "dist/jin.d.ts",
+  "unpkg": "dist/jin.global.js",
+  "jsdelivr": "dist/jin.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "buildOptions": {
+    "name": "jin",
+    "formats": [
+      "esm-bundler",
+      "esm-bundler-runtime",
+      "cjs",
+      "global",
+      "global-runtime",
+      "esm-browser",
+      "esm-browser-runtime"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skingford/kingford.git"
+  },
+  "keywords": [
+    "jin"
+  ],
+  "author": "kingford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skingford/kingford/issues"
+  },
+  "homepage": "https://github.com/skingford/kingford#readme",
+  "devDependencies": {}
+}
