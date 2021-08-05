@@ -36,5 +36,7 @@
     "url": "https://github.com/skingford/kingford/issues"
   },
   "homepage": "https://github.com/skingford/kingford#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "@vue/runtime-dom": "^3.1.5"
+  }
 }
